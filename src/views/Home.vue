@@ -1,10 +1,10 @@
 <script>
-import QuoteContent from '../components/QuoteContent.vue'
-import Header from '../components/Header.vue'
+import QuoteContent from '../components/QuoteContent.vue';
+import Header from '../components/Header.vue';
 
 export default {
   name: 'home',
-}
+};
 </script>
 
 <template>
