@@ -15,7 +15,7 @@
   </header>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   display: flex;
   justify-content: space-between;
@@ -27,10 +27,13 @@
   align-items: center;
 }
 
-.quotes-all {
-  cursor: pointer;
-}
-.quotes-random {
-  cursor: pointer;
+.quotes {
+  &-all {
+    cursor: pointer;
+  }
+
+  &-random {
+    cursor: pointer;
+  }
 }
 </style>
