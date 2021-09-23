@@ -8,8 +8,9 @@
     "format": "npx prettier --write ."
   },
   "dependencies": {
+    "@vue/compiler-sfc": "^3.2.16",
     "sass": "^1.42.1",
-    "vue": "^3.2.13",
+    "vue": "^2.6.14",
     "vue-router": "^3.5.2"
   },
   "devDependencies": {
