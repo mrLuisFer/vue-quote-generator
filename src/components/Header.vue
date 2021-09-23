@@ -1,4 +1,8 @@
-<script setup></script>
+<script>
+export default {
+  name: 'Header',
+};
+</script>
 
 <template>
   <header class="header">

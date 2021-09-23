@@ -1,17 +1,7 @@
-<script>
-import QuoteContent from '../components/QuoteContent.vue';
-import Header from '../components/Header.vue';
-
-export default {
-  name: 'home',
-};
-</script>
+<script></script>
 
 <template>
-  <div class="home">
-    <Header />
-    <QuoteContent />
-  </div>
+  <div class="home">some</div>
 </template>
 
 <style scoped></style>
