@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template></template>
+<template>
+  <p>Quote</p>
+</template>
 
 <style scoped lang="scss"></style>
