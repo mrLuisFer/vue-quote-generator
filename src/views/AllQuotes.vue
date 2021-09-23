@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <p>Quote</p>
+  <div class="container">
+    <p>All</p>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>

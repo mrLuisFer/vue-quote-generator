@@ -1,12 +1,12 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
-import QuoteContent from "./components/QuoteContent.vue";
-import Header from "./components/Header.vue";
+import Home from './views/Home.vue';
 </script>
 
 <template>
-  <Header />
-  <QuoteContent />
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style>
