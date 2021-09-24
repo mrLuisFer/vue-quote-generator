@@ -1,6 +1,4 @@
 <script>
-import { randomQuote } from 'quotegarden'
-
 export default {
   name: 'QuoteContent',
   data() {
@@ -13,9 +11,9 @@ export default {
   },
   methods: {
     getRandomQuote() {
-      randomQuote().then((quote) => {
-        this.quotes.push(quote)
-      })
+      const quote = 'Some quote'
+      this.quotes.push(quote)
+      console.log(this.quotes)
     },
   },
 }
