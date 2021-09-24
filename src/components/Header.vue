@@ -2,10 +2,12 @@
 
 <template>
   <header class="header">
-    <a href="/all" class="flex quotes-all">
-      <span class="material-icons"> bolt </span>
-      <p>All quotes</p>
-    </a>
+    <div>
+      <router-link to="/quotes">
+        <span class="material-icons"> bolt </span>
+        <p>All quotes</p>
+      </router-link>
+    </div>
     <div class="quotes-random">
       <p class="flex">
         Random
