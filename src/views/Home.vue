@@ -1,11 +1,11 @@
 <script setup>
-import QuoteContent from '../components/QuoteContent.vue';
+import QuoteContent from '../components/QuoteContent.vue'
 </script>
 
 <template>
-  <div class="home">
+  <section class="home">
     <QuoteContent />
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
