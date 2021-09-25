@@ -24,7 +24,7 @@ export default {
       >
         {{ authorName }}
       </a>
-      <router-link to="/quotes" class="quote-author-name-icon">
+      <router-link :to="`/quotes/${authorSlug}`" class="quote-author-name-icon">
         <span class="material-icons"> arrow_forward </span>
       </router-link>
     </h1>
