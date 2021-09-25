@@ -10,8 +10,25 @@ import Header from './components/Header.vue'
 </template>
 
 <style>
+/* Global Styles */
+:root {
+  font-size: 16px;
+  --primary: #f9d5a7;
+  --secondary: #ffe1af;
+  --tertiary: #ffb085;
+  --radius: 10px;
+  --transition: 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background: rgb(247, 247, 247);
+  /* background: rgb(247, 247, 247); */
+  background: #f7f6f2;
 }
 
 #app {
@@ -21,6 +38,6 @@ body {
   color: #2c3e50;
   width: 100%;
   min-height: 100vh;
-  padding: 0.5rem 0;
+  padding: 1.5rem 2rem;
 }
 </style>
