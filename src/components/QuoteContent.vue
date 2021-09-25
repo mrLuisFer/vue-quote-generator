@@ -31,7 +31,14 @@ export default {
   >
     <blockquote class="quote-text">"{{ quote.content }}"</blockquote>
     <div class="quote-author">
-      <h1 class="quote-author-name">{{ quote.author }}</h1>
+      <h1 class="quote-author-name">
+        <a
+          :href="`https://www.google.com/search?q=${quote.authorSlug}`"
+          target="_blank"
+        >
+          {{ quote.author }}
+        </a>
+      </h1>
       <p class="quote-author-slug">{{ quote.authorSlug }}</p>
     </div>
   </article>
@@ -60,7 +67,19 @@ export default {
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+
       text-transform: capitalize;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: var(--transition);
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
 
     &-slug {

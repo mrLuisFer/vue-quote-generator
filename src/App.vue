@@ -27,8 +27,7 @@ import Header from './components/Header.vue'
 }
 
 body {
-  /* background: rgb(247, 247, 247); */
-  background: #f7f6f2;
+  background: rgb(250, 247, 245);
 }
 
 #app {
