@@ -1,7 +1,12 @@
 <script>
+import QuoteAuthor from './QuoteAuthor.vue'
+
 export default {
   name: 'QuoteContent',
   el: '#quote-content',
+  components: {
+    'quote-author': QuoteAuthor,
+  },
   data() {
     return {
       quotes: [],
@@ -29,21 +34,11 @@ export default {
     id="#quote-content"
   >
     <blockquote class="quote-text">"{{ quote.content }}"</blockquote>
-    <div class="quote-author">
-      <h1 class="quote-author-name">
-        <a
-          :href="`https://www.google.com/search?q=${quote.authorSlug}`"
-          target="_blank"
-        >
-          {{ quote.author }}
-        </a>
-      </h1>
-      <p class="quote-author-slug">{{ quote.authorSlug }}</p>
-    </div>
+    <quote-author :authorName="quote.author" :authorSlug="quote.authorSlug" />
   </article>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .quote {
   margin: 0 auto;
   display: block;
@@ -57,35 +52,6 @@ export default {
     border-left: 5px solid var(--primary);
     display: flex;
     align-items: center;
-  }
-
-  &-author {
-    margin: 4rem 0 0 4rem;
-
-    &-name {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-
-      text-transform: capitalize;
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        opacity: 0.85;
-        transition: var(--transition);
-
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-
-    &-slug {
-      font-weight: 400;
-      font-size: 0.8rem;
-      text-transform: lowercase;
-    }
   }
 }
 </style>
