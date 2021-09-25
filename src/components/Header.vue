@@ -14,7 +14,7 @@ export default {
   <header class="header" id="header">
     <router-link to="/quotes" class="flex header-allBtn">
       <span class="material-icons header-icon"> bolt </span>
-      <p>All quotes</p>
+      <p>More quotes</p>
     </router-link>
     <div
       class="header-randomBtn"

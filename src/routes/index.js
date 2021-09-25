@@ -1,15 +1,15 @@
-import Home from '../views/Home.vue';
-import AllQuotes from '../views/AllQuotes.vue';
+import Home from '../views/Home.vue'
+import MoreQuotes from '../views/MoreQuotes.vue'
 
 export const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home,
   },
   {
     path: '/quotes',
-    name: 'quotes',
-    component: AllQuotes,
+    name: 'MoreQuotes',
+    component: MoreQuotes,
   },
-];
+]
