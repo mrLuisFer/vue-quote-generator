@@ -16,7 +16,6 @@ export default {
       const res = await fetch(url)
       const quote = await res.json()
       this.quotes.push(quote)
-      console.log(this.quotes)
     },
   },
 }

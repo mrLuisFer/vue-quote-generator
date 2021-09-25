@@ -1,7 +1,12 @@
 <script>
+import HeaderLink from './HeaderLink.vue'
+
 export default {
   name: 'Header',
   el: '#header',
+  components: {
+    'header-link': HeaderLink,
+  },
   methods: {
     reloadWindow() {
       window.location.reload()
@@ -12,10 +17,14 @@ export default {
 
 <template>
   <header class="header" id="header">
-    <router-link to="/quotes" class="flex header-allBtn">
-      <span class="material-icons header-icon"> bolt </span>
-      <p>More quotes</p>
-    </router-link>
+    <div class="header-links">
+      <header-link url="/" iconName="undo">
+        <p>Back</p>
+      </header-link>
+      <header-link url="/quotes" iconName="bolt">
+        <p>More quotes</p>
+      </header-link>
+    </div>
     <div
       class="header-randomBtn"
       @click="reloadWindow"
@@ -29,7 +38,7 @@ export default {
   </header>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 $gray: #9b9b9b;
 
 .header {
@@ -38,6 +47,11 @@ $gray: #9b9b9b;
   align-items: center;
   font-size: 0.9rem;
   margin-bottom: 2rem;
+
+  &-links {
+    display: flex;
+    column-gap: 0.3rem;
+  }
 
   &-randomBtn {
     padding: 0.5rem;
