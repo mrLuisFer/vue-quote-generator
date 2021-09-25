@@ -1,4 +1,14 @@
-<script setup></script>
+<script>
+export default {
+  name: 'Header',
+  el: '#header',
+  methods: {
+    reloadWindow() {
+      window.location.reload()
+    },
+  },
+}
+</script>
 
 <template>
   <header class="header" id="header">
@@ -6,7 +16,11 @@
       <span class="material-icons header-icon"> bolt </span>
       <p>All quotes</p>
     </router-link>
-    <div class="header-randomBtn">
+    <div
+      class="header-randomBtn"
+      @click="reloadWindow"
+      title="This will reload the page"
+    >
       <p class="flex">
         <span class="material-icons header-icon"> autorenew </span>
         Random
@@ -16,6 +30,8 @@
 </template>
 
 <style scoped lang="scss">
+$gray: #9b9b9b;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -32,10 +48,27 @@
     font-weight: 600;
     transition: background var(--transition);
     border: 1px solid transparent;
+    position: relative;
 
     &:hover {
       background: var(--secondary);
       border: 1px solid var(--tertiary);
+      transition: var(--transition);
+
+      &::after {
+        transition: var(--transition);
+        content: 'This will reload the page';
+        position: absolute;
+        bottom: -3.2rem;
+        left: -10px;
+        width: 100px;
+        background: #242424;
+        border-radius: var(--radius);
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        color: #fff;
+        font-weight: normal;
+      }
     }
   }
 
@@ -48,7 +81,6 @@
     border: 1px solid transparent;
 
     &:hover {
-      $gray: #9b9b9b;
       background: rgba($gray, 0.1);
       border: 1px solid rgba($gray, 0.2);
     }
