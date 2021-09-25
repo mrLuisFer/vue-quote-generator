@@ -1,14 +1,12 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
-import Home from './views/Home.vue';
-import Header from './components/Header.vue';
+import Home from './views/Home.vue'
+import Header from './components/Header.vue'
 </script>
 
 <template>
-  <div>
-    <Header />
-    <router-view></router-view>
-  </div>
+  <Header />
+  <router-view></router-view>
 </template>
 
 <style>
@@ -23,5 +21,6 @@ body {
   color: #2c3e50;
   width: 100%;
   min-height: 100vh;
+  padding: 0.5rem 0;
 }
 </style>

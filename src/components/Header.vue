@@ -1,13 +1,11 @@
 <script setup></script>
 
 <template>
-  <header class="header">
-    <div>
-      <router-link to="/quotes">
-        <span class="material-icons"> bolt </span>
-        <p>All quotes</p>
-      </router-link>
-    </div>
+  <header class="header" id="header">
+    <router-link to="/quotes" class="flex header-link">
+      <span class="material-icons"> bolt </span>
+      <p>All quotes</p>
+    </router-link>
     <div class="quotes-random">
       <p class="flex">
         Random
@@ -22,6 +20,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &-link {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .flex {

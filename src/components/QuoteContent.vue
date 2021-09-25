@@ -23,12 +23,20 @@ export default {
 </script>
 
 <template>
-  <div id="#quote-content">
-    <p>Quote</p>
-    <div v-for="quote in quotes" :key="quote._id">
-      <p>{{ quote.content }}</p>
-    </div>
-  </div>
+  <article
+    v-for="quote in quotes"
+    :key="quote._id"
+    class="quote-container"
+    id="#quote-content"
+  >
+    <h1 class="quote-text">
+      <blockquote>
+        {{ quote.content }}
+      </blockquote>
+    </h1>
+    <h2 class="quote-author">{{ quote.author }}</h2>
+    <p class="quote-author-slug">{{ quote.authorSlug }}</p>
+  </article>
 </template>
 
 <style scoped lang="scss"></style>
