@@ -24,6 +24,9 @@ export default {
       >
         {{ authorName }}
       </a>
+      <router-link to="/quotes" class="quote-author-name-icon">
+        <span class="material-icons"> arrow_forward </span>
+      </router-link>
     </h1>
     <p class="quote-author-slug">{{ authorSlug }}</p>
   </div>
@@ -45,8 +48,19 @@ export default {
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-
       text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      line-height: 0rem;
+
+      &-icon {
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
 
       a {
         color: inherit;
