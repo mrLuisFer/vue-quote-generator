@@ -7,9 +7,21 @@ export default {
   components: {
     'header-link': HeaderLink,
   },
+  data() {
+    return {
+      currentRoute: this.$router.currentRoute._value.fullPath,
+    }
+  },
+  mounted() {
+    this.currentRoute = this.$router.currentRoute._value.fullPath
+  },
   methods: {
     reloadWindow() {
-      window.location.reload()
+      if (this.currentRoute === '/') {
+        window.location.reload()
+      } else {
+        this.$router.push('/')
+      }
     },
   },
 }
