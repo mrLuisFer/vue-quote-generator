@@ -4,6 +4,7 @@ export default {
     return {
       authorParams: this.$route.params.author,
       authorQuoteData: [],
+      author: '',
     }
   },
   mounted() {
@@ -16,6 +17,9 @@ export default {
       const data = await res.json()
       this.authorQuoteData = data
       console.log(data)
+
+      const authorData = data.results.find((quote) => quote.author)
+      this.author = authorData.author
     },
   },
 }
@@ -23,16 +27,40 @@ export default {
 
 <template>
   <section class="author-container">
-    <h1 class="author-title">{{ authorParams }}</h1>
-    <p class="author-count">{{ authorQuoteData.count }} Most famous quotes:</p>
+    <h1
+      class="
+        text-3xl
+        capitalize
+        mb-2
+        pl-2
+        border-l-4 border-yellow-100
+        hover:border-yellow-400
+        transition-colors
+      "
+    >
+      {{ author }}
+    </h1>
+    <p class="text-sm font-semibold my-3">
+      {{ authorQuoteData.count }} Most famous quotes:
+    </p>
     <article>
-      <ul class="author-list">
+      <ul class="list-none">
         <li
-          class="author-list-item"
+          class="
+            my-6
+            font-serif
+            text-lg
+            border-l-4 border-yellow-100
+            pl-2
+            hover:border-red-400
+            transition-all
+          "
           v-for="authorQuote in authorQuoteData.results"
           :key="authorQuote.author"
         >
-          {{ authorQuote.content }}
+          <blockquote>
+            {{ authorQuote.content }}
+          </blockquote>
         </li>
       </ul>
     </article>
