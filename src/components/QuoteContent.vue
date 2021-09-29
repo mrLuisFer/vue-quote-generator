@@ -49,9 +49,14 @@ export default {
     font-size: 1.7rem;
     line-height: 1.5;
     padding: 1rem 4rem;
-    border-left: 5px solid var(--primary);
+    border-left: 5px solid var(--secondary);
     display: flex;
     align-items: center;
+    transition: border var(--transition);
+
+    &:hover {
+      border-left: 5px solid var(--primary);
+    }
   }
 }
 </style>

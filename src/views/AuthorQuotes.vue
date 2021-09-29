@@ -38,7 +38,9 @@ export default {
         transition-colors
       "
     >
-      {{ author }}
+      <a :href="`https://www.google.com/search?q=${author}`" target="_blank">
+        {{ author }}
+      </a>
     </h1>
     <p class="text-sm font-semibold my-3">
       {{ authorQuoteData.count }} Most famous quotes:
