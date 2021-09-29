@@ -9,11 +9,11 @@ export default {
   },
   data() {
     return {
-      currentRoute: this.$router.currentRoute._value.fullPath,
+      currentRoute: this.$router.currentRoute._value.fullPath.toString(),
     }
   },
   mounted() {
-    this.currentRoute = this.$router.currentRoute._value.fullPath
+    this.currentRoute = this.$router.currentRoute._value.fullPath.toString()
   },
   methods: {
     reloadWindow() {
