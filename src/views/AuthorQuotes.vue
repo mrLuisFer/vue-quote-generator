@@ -50,7 +50,6 @@ export default {
         <li
           class="
             my-6
-            font-serif
             text-lg
             border-l-4 border-yellow-100
             pl-2
