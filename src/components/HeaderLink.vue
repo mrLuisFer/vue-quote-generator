@@ -15,7 +15,11 @@ export default {
 </script>
 
 <template>
-  <router-link :to="url" class="flex header-allBtn">
+  <router-link
+    :to="url"
+    class="flex header-allBtn select-none"
+    draggable="false"
+  >
     <span class="material-icons header-icon"> {{ iconName }} </span>
     <slot></slot>
   </router-link>

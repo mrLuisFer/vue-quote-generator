@@ -10,10 +10,8 @@ export default {
   data() {
     return {
       currentRoute: this.$router.currentRoute._value.fullPath.toString(),
+      goBackHover: false,
     }
-  },
-  mounted() {
-    this.currentRoute = this.$router.currentRoute._value.fullPath.toString()
   },
   methods: {
     reloadWindow() {
@@ -23,6 +21,15 @@ export default {
         this.$router.push('/')
       }
     },
+    goBack() {
+      this.$router.go(-1)
+    },
+    onMouseEnterOnBackBtn() {
+      this.goBackHover = true
+    },
+    onMouseLeaveOnBackBtn() {
+      this.goBackHover = false
+    },
   },
 }
 </script>
@@ -30,8 +37,27 @@ export default {
 <template>
   <header class="header" id="header">
     <div class="header-links">
-      <header-link url="/" iconName="undo">
-        <p>Back</p>
+      <p
+        draggable="false"
+        @click="goBack"
+        class="flex header-allBtn select-none"
+        @mouseenter="onMouseEnterOnBackBtn"
+        @mouseleave="onMouseLeaveOnBackBtn"
+      >
+        <span class="material-icons header-icon animate-pulse">
+          chevron_left
+        </span>
+        <span
+          v-show="goBackHover"
+          :class="`transition-opacity delay-150 ${
+            goBackHover ? 'opacity-100' : 'opacity-0'
+          }`"
+        >
+          Go back
+        </span>
+      </p>
+      <header-link url="/" iconName="grass">
+        <p>Home</p>
       </header-link>
       <header-link url="/quotes" iconName="bolt">
         <p>More quotes</p>
@@ -105,6 +131,7 @@ $gray: #9b9b9b;
     text-decoration: none;
     color: inherit;
     border: 1px solid transparent;
+    cursor: pointer;
 
     &:hover {
       background: rgba($gray, 0.1);
