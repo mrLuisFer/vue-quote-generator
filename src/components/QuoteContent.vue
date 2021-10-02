@@ -33,7 +33,9 @@ export default {
     class="quote"
     id="#quote-content"
   >
-    <blockquote class="quote-text">"{{ quote.content }}"</blockquote>
+    <blockquote class="quote-text">
+      "{{ quote.content }}"
+    </blockquote>
     <quote-author :authorName="quote.author" :authorSlug="quote.authorSlug" />
   </article>
 </template>
