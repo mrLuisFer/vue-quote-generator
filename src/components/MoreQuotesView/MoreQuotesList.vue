@@ -33,8 +33,11 @@ export default {
           :to="`/quotes/${quote.authorSlug}`"
           class="quote-author-name-icon"
         >
-          - {{ quote.author }}
-        </router-link>
+          -
+	  <span class="hover:underline">
+	  {{ quote.author }}
+        </span>
+	</router-link>
       </h2>
     </li>
   </ul>
