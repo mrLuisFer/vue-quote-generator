@@ -24,7 +24,7 @@ export default {
     :title="quotesPage"
     @click="onClick"
     :class="disablePage ? 'disable' : 'no-disable'"
-    class="border-transparent border-2 hover:border-yellow-200 rounded-md flex items-center p-1 bg-transparent active:bg-yellow-300 hover:bg-yellow-200"
+    class="border-transparent border-2 hover:border-yellow-200 rounded-md flex items-center p-1 bg-transparent active:bg-yellow-300 hover:bg-yellow-200 transition-colors"
   >
     <span class="material-icons"> {{ iconName }}</span>
   </button>

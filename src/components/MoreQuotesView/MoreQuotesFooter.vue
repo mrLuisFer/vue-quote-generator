@@ -40,7 +40,7 @@ export default {
 	:disablePage="disablePage"
       ></footer-btn>
     </div>
-    <p>Page {{ quotes.page }}</p>
+    <p class="font-semibold hover:text-green-600 transition-colors">Page {{ quotes.page }}</p>
   </footer>
 </template>
 
