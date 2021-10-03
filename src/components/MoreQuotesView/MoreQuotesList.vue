@@ -32,6 +32,7 @@ export default {
         <router-link
           :to="`/quotes/${quote.authorSlug}`"
           class="quote-author-name-icon"
+					:title="`Click to see more quotes of ${quote.author}`"
         >
           -
 	  <span class="hover:underline">

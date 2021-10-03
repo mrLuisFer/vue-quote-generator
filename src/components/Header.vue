@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-  <header class="header" id="header">
+  <header class="header flex-wrap" id="header">
     <div class="header-links">
       <p
         draggable="false"
@@ -43,6 +43,7 @@ export default {
         class="flex header-allBtn select-none"
         @mouseenter="onMouseEnterOnBackBtn"
         @mouseleave="onMouseLeaveOnBackBtn"
+				title="This goes back one page"
       >
         <span class="material-icons header-icon animate-pulse">
           chevron_left
@@ -134,9 +135,15 @@ $gray: #9b9b9b;
     cursor: pointer;
 
     &:hover {
-      background: rgba($gray, 0.1);
+			background: var(--secondary);
       border: 1px solid rgba($gray, 0.2);
+
+			&:active {
+				background: var(--primary);
+			}
     }
+
+
   }
 
   &-icon {
