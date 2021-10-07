@@ -32,6 +32,7 @@
 		@mouseenter="onMouseEnter"
 		@mouseleave="onMouseLeave"
 		@click="toTop"
+		title="Scroll to top :)"
 	>
 		<span class="material-icons" v-if="goBackHover">
 			north
