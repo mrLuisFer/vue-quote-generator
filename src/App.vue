@@ -2,11 +2,13 @@
 // This starter template is using Vue 3 <script setup> SFCs
 import Home from './views/Home.vue'
 import Header from './components/Header.vue'
+import ScrollToTop from './components/ScrollToTop.vue'
 </script>
 
 <template>
   <Header />
   <router-view></router-view>
+	<ScrollToTop />
 </template>
 
 <style>
@@ -20,6 +22,10 @@ import Header from './components/Header.vue'
   --transition: 0.2s ease-in-out;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -28,6 +34,7 @@ import Header from './components/Header.vue'
 
 body {
   background: rgb(250, 247, 245);
+	scroll-behavior: smooth;
 }
 
 #app {
