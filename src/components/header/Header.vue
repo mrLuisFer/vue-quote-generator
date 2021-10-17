@@ -1,11 +1,13 @@
 <script>
 import HeaderLink from './HeaderLink.vue'
+import GoBackBtn from './GoBackBtn.vue'
 
 export default {
   name: 'Header',
   el: '#header',
   components: {
     'header-link': HeaderLink,
+    'goback-btn': GoBackBtn,
   },
   data() {
     return {
@@ -37,30 +39,16 @@ export default {
 <template>
   <header class="header flex-wrap" id="header">
     <div class="header-links">
-      <p
-        draggable="false"
-        @click="goBack"
-        class="flex header-allBtn select-none"
-        @mouseenter="onMouseEnterOnBackBtn"
-        @mouseleave="onMouseLeaveOnBackBtn"
-				title="This goes back one page"
-      >
-        <span class="material-icons header-icon animate-pulse">
-          chevron_left
-        </span>
-        <span
-          v-show="goBackHover"
-          :class="`transition-opacity delay-150 ${
-            goBackHover ? 'opacity-100' : 'opacity-0'
-          }`"
-        >
-          Go back
-        </span>
-      </p>
-      <header-link url="/" iconName="grass">
+      <goback-btn
+        :onMouseEnterOnBackBtn="onMouseEnterOnBackBtn"
+        :onMouseLeaveOnBackBtn="onMouseLeaveOnBackBtn"
+        :goBack="goBack"
+        :goBackHover="goBackHover"
+      ></goback-btn>
+      <header-link url="/" iconName="grass" title="Go to the home view">
         <p>Home</p>
       </header-link>
-      <header-link url="/quotes" iconName="bolt">
+      <header-link url="/quotes" iconName="bolt" title="List of quotes">
         <p>More quotes</p>
       </header-link>
     </div>
@@ -108,12 +96,11 @@ $gray: #9b9b9b;
       border: 1px solid var(--tertiary);
       transition: var(--transition);
 
-      &::after {
+      /* &::after {
         transition: var(--transition);
         content: 'This will reload the page';
         position: absolute;
-        bottom: -3.2rem;
-        left: -10px;
+        bottom: -5rem;
         width: 100px;
         background: #242424;
         border-radius: var(--radius);
@@ -121,7 +108,7 @@ $gray: #9b9b9b;
         font-size: 0.75rem;
         color: #fff;
         font-weight: normal;
-      }
+      } */
     }
   }
 
@@ -135,15 +122,13 @@ $gray: #9b9b9b;
     cursor: pointer;
 
     &:hover {
-			background: var(--secondary);
+      background: var(--secondary);
       border: 1px solid rgba($gray, 0.2);
 
-			&:active {
-				background: var(--primary);
-			}
+      &:active {
+        background: var(--primary);
+      }
     }
-
-
   }
 
   &-icon {

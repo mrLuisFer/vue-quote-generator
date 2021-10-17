@@ -10,6 +10,11 @@ export default {
       type: String,
       default: 'bolt',
     },
+		title: {
+			type: String,
+			default: '',
+			required: true,
+		}
   },
 }
 </script>
@@ -19,6 +24,7 @@ export default {
     :to="url"
     class="flex header-allBtn select-none"
     draggable="false"
+		:title="title"
   >
     <span class="material-icons header-icon"> {{ iconName }} </span>
     <slot></slot>
