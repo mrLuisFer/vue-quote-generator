@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <p
+  <button
     id="go-back-btn"
     draggable="false"
     class="flex header-allBtn select-none"
@@ -32,6 +32,7 @@ export default {
     @mouseenter="onMouseEnterOnBackBtn"
     @mouseleave="onMouseLeaveOnBackBtn"
     title="This goes back one page"
+    type="button"
   >
     <span class="material-icons header-icon animate-pulse"> chevron_left </span>
     <span
@@ -42,7 +43,7 @@ export default {
     >
       Go back
     </span>
-  </p>
+  </button>
 </template>
 
 <style></style>
