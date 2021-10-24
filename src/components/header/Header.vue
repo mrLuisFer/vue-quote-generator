@@ -1,6 +1,7 @@
 <script>
 import HeaderLink from './HeaderLink.vue'
 import GoBackBtn from './GoBackBtn.vue'
+import RandomBtn from './RandomBtn.vue'
 
 export default {
   name: 'Header',
@@ -8,6 +9,7 @@ export default {
   components: {
     'header-link': HeaderLink,
     'goback-btn': GoBackBtn,
+    'random-btn': RandomBtn,
   },
   data() {
     return {
@@ -52,16 +54,7 @@ export default {
         <p>More quotes</p>
       </header-link>
     </div>
-    <div
-      class="header-randomBtn"
-      @click="reloadWindow"
-      title="This will reload the page"
-    >
-      <p class="flex">
-        <span class="material-icons header-icon"> autorenew </span>
-        Random
-      </p>
-    </div>
+    <random-btn />
   </header>
 </template>
 
