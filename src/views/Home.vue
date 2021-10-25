@@ -3,7 +3,7 @@ import QuoteContent from '../components/QuoteContent.vue'
 </script>
 
 <template>
-  <section class="home">
+  <section class="home pt-4 sm:pt-0">
     <QuoteContent />
   </section>
 </template>

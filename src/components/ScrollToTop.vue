@@ -30,7 +30,7 @@
 <template>
 	<button
 		id="scrollToTop"
-		class="fixed right-0 bottom-0 mr-12 mb-12 p-2 border-2 border-yellow-200 rounded-lg flex items-center transition shadow-sm hover:shadow-lg hover:bg-yellow-200"
+		class="fixed right-0 bottom-0 mr-8 sm:mr-12 mb-8 sm:mb-12 p-1 sm:p-2 border-2 border-yellow-200 rounded-lg flex items-center transition shadow-sm hover:shadow-lg hover:bg-yellow-200"
 		@mouseenter="onMouseEnter"
 		@mouseleave="onMouseLeave"
 		@click="toTop"

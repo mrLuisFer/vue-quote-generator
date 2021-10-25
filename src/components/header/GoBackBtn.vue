@@ -37,7 +37,7 @@ export default {
     <span class="material-icons header-icon animate-pulse"> chevron_left </span>
     <span
       v-show="goBackHover"
-      :class="`transition-opacity delay-150 ${
+      :class="`transition-opacity delay-150 hidden sm:block ${
         goBackHover ? 'opacity-100' : 'opacity-0'
       }`"
     >

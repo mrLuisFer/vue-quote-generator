@@ -35,10 +35,14 @@ export default {
 <style scoped lang="scss">
 .quote {
   &-author {
-    margin: 4rem 0 0 3rem;
+    margin: 2rem 0 0 1rem;
     border-left: 2px solid transparent;
     padding-left: 0.5rem;
     transition: border var(--transition);
+
+    @media (min-width: 640px) {
+      margin: 4rem 0 0 3rem;
+    }
 
     &:hover {
       border-left: 2px solid var(--secondary);

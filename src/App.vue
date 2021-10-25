@@ -11,7 +11,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 	<ScrollToTop />
 </template>
 
-<style>
+<style lang="scss">
 /* Global Styles */
 :root {
   font-size: 16px;
@@ -44,6 +44,10 @@ body {
   color: #2c3e50;
   width: 100%;
   min-height: 100vh;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0.5rem;
+
+  @media (min-width: 640px) {
+    padding: 1.5rem 2rem;
+  }
 }
 </style>

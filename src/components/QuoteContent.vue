@@ -41,20 +41,31 @@ export default {
 </template>
 
 <style lang="scss">
+  $sm: 640px;
+
+
 .quote {
   margin: 0 auto;
   display: block;
-  max-width: 600px;
+
+  @media (min-width: $sm) {
+    max-width: 600px;
+  }
 
   &-text {
-    height: 200px;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     line-height: 1.5;
-    padding: 1rem 4rem;
+    padding: 1.5rem;
     border-left: 5px solid var(--secondary);
     display: flex;
     align-items: center;
     transition: border var(--transition);
+    height: 200px;
+
+    @media (min-width: $sm) {
+      padding: 1rem 4rem;
+      font-size: 1.7rem;
+    }
 
     &:hover {
       border-left: 5px solid var(--primary);

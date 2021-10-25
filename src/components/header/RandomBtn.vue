@@ -28,7 +28,7 @@ export default {
 
 <template>
   <button
-    class="header-randomBtn"
+    class="header-randomBtn block"
     @click="reloadWindow"
     title="This will reload the page"
     id="random-btn"
