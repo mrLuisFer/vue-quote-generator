@@ -1,18 +1,20 @@
 <script>
+	const defaultBtnIcon = "keyboard_arrow_up"
+
 	export default {
   name: 'ScrollToTop',
   el: '#scrollToTop',
   data() {
     return {
-      goBackHover: false,
+      btnIcon: defaultBtnIcon
     }
   },
   methods: {
 		onMouseEnter() {
-			this.goBackHover = true
+			this.btnIcon = "north"
 		},
 		onMouseLeave() {
-			this.goBackHover = false
+			this.btnIcon = defaultBtnIcon
 		},
 		toTop() {
 			window.scrollTo({
@@ -28,17 +30,14 @@
 <template>
 	<button
 		id="scrollToTop"
-		class="fixed right-0 bottom-0 mr-12 mb-12 p-2 border-2 border-yellow-200 rounded-lg flex items-center transition-all shadow-sm hover:shadow-lg hover:bg-yellow-200"
+		class="fixed right-0 bottom-0 mr-12 mb-12 p-2 border-2 border-yellow-200 rounded-lg flex items-center transition shadow-sm hover:shadow-lg hover:bg-yellow-200"
 		@mouseenter="onMouseEnter"
 		@mouseleave="onMouseLeave"
 		@click="toTop"
 		title="Scroll to top :)"
 	>
-		<span class="material-icons" v-if="goBackHover">
-			north
-		</span>
-		<span class="material-icons" v-else>
-			keyboard_arrow_up
+		<span class="material-icons">
+			{{btnIcon}}
 		</span>
 	</button>
 </template>

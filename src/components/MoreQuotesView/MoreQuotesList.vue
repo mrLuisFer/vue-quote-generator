@@ -35,10 +35,10 @@ export default {
 					:title="`Click to see more quotes of ${quote.author}`"
         >
           -
-	  <span class="hover:underline">
-	  {{ quote.author }}
-        </span>
-	</router-link>
+	        <span class="hover:underline">
+	         {{ quote.author }}
+          </span>
+	      </router-link>
       </h2>
     </li>
   </ul>
