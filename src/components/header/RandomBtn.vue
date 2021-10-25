@@ -2,6 +2,12 @@
 export default {
   name: 'RandomBtn',
   el: '#random-btn',
+  props: {
+    reloadWindow: {
+      type: Function,
+      required: true
+    }
+  }
 }
 </script>
 

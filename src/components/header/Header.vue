@@ -54,7 +54,7 @@ export default {
         <p>More quotes</p>
       </header-link>
     </div>
-    <random-btn />
+    <random-btn :reloadWindow="reloadWindow" />
   </header>
 </template>
 
