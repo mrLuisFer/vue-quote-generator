@@ -4,8 +4,8 @@ import GoBackBtn from './GoBackBtn.vue'
 import RandomBtn from './RandomBtn.vue'
 
 export default {
-  name: 'Header',
   el: '#header',
+  name: 'CommonHeader',
   components: {
     'header-link': HeaderLink,
     'goback-btn': GoBackBtn,
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-  <header class="header flex-wrap" id="header">
+  <header id="header" class="header flex-wrap">
     <div class="header-links">
       <goback-btn
         :onMouseEnterOnBackBtn="onMouseEnterOnBackBtn"

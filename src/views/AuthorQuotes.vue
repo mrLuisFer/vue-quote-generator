@@ -48,6 +48,8 @@ export default {
     <article>
       <ul class="list-none">
         <li
+          v-for="authorQuote in authorQuoteData.results"
+          :key="authorQuote.author"
           class="
             my-6
             text-lg
@@ -56,8 +58,6 @@ export default {
             hover:border-red-400
             transition-all
           "
-          v-for="authorQuote in authorQuoteData.results"
-          :key="authorQuote.author"
         >
           <blockquote>
             {{ authorQuote.content }}

@@ -1,10 +1,10 @@
 <script setup>
-import Header from './components/header/Header.vue'
+import CommonHeader from './components/header/Header.vue'
 import ScrollToTop from './components/ScrollToTop.vue'
 </script>
 
 <template>
-  <Header />
+  <CommonHeader />
   <router-view></router-view>
   <ScrollToTop />
 </template>

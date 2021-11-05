@@ -1,7 +1,7 @@
 <script>
 export default {
-  name: 'QuoteAuthor',
   el: '#quote-author',
+  name: 'QuoteAuthor',
   props: {
     authorName: {
       type: String,
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <article class="quote-author inline-block" id="quote-author">
+  <article id="quote-author" class="quote-author inline-block">
     <h1 class="quote-author-name">
       <a
         :href="`https://www.google.com/search?q=${authorSlug}`"

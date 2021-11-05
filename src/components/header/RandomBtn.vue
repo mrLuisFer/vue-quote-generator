@@ -2,18 +2,18 @@
 const defaultBtnText = 'Random'
 
 export default {
-  name: 'RandomBtn',
   el: '#random-btn',
-  data() {
-    return {
-      randomBtnText: defaultBtnText,
-    }
-  },
+  name: 'RandomBtn',
   props: {
     reloadWindow: {
       type: Function,
       required: true,
     },
+  },
+  data() {
+    return {
+      randomBtnText: defaultBtnText,
+    }
   },
   methods: {
     handleMouseEnter() {
@@ -28,10 +28,10 @@ export default {
 
 <template>
   <button
-    class="header-randomBtn block"
-    @click="reloadWindow"
-    title="This will reload the page"
     id="random-btn"
+    class="header-randomBtn block"
+    title="This will reload the page"
+    @click="reloadWindow"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
