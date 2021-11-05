@@ -1,28 +1,28 @@
 <script>
-  const defaultBtnText = "Random"
+const defaultBtnText = 'Random'
 
 export default {
   name: 'RandomBtn',
   el: '#random-btn',
   data() {
     return {
-      randomBtnText: defaultBtnText
+      randomBtnText: defaultBtnText,
     }
   },
   props: {
     reloadWindow: {
       type: Function,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     handleMouseEnter() {
-      this.randomBtnText = "Reload window"
+      this.randomBtnText = 'Reload window'
     },
     handleMouseLeave() {
       this.randomBtnText = defaultBtnText
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -37,7 +37,9 @@ export default {
   >
     <p class="flex">
       <span class="material-icons header-icon"> autorenew </span>
-      {{randomBtnText}}
+      <span class="hidden sm:inline-block">
+        {{ randomBtnText }}
+      </span>
     </p>
   </button>
 </template>

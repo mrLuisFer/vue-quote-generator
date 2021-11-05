@@ -47,7 +47,7 @@ export default {
         :goBack="goBack"
         :goBackHover="goBackHover"
       ></goback-btn>
-      <header-link url="/" iconName="grass" title="Go to the home view">
+      <header-link url="/" iconName="home" title="Go to the home view">
         <p>Home</p>
       </header-link>
       <header-link url="/quotes" iconName="bolt" title="List of quotes">
@@ -70,7 +70,10 @@ $gray: #9b9b9b;
 
   &-links {
     display: flex;
-    column-gap: 0.3rem;
+
+    @media (min-width: 640px) {
+      column-gap: 0.3rem;
+    }
   }
 
   &-randomBtn {
@@ -126,7 +129,10 @@ $gray: #9b9b9b;
 
   &-icon {
     font-size: 0.95rem;
-    margin-right: 0.3rem;
+
+    @media (min-width: 640px) {
+      margin-right: 0.3rem;
+    }
   }
 }
 

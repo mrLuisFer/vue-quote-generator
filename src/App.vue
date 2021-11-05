@@ -1,6 +1,4 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-import Home from './views/Home.vue'
 import Header from './components/header/Header.vue'
 import ScrollToTop from './components/ScrollToTop.vue'
 </script>
@@ -8,7 +6,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 <template>
   <Header />
   <router-view></router-view>
-	<ScrollToTop />
+  <ScrollToTop />
 </template>
 
 <style lang="scss">
@@ -23,7 +21,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -34,7 +32,7 @@ html {
 
 body {
   background: rgb(250, 247, 245);
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #app {

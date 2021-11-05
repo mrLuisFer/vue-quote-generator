@@ -27,22 +27,19 @@ export default {
 </script>
 
 <template>
-  <article
+  <div
     v-for="quote in quotes"
     :key="quote._id"
     class="quote"
     id="#quote-content"
   >
-    <blockquote class="quote-text">
-      "{{ quote.content }}"
-    </blockquote>
+    <blockquote class="quote-text">"{{ quote.content }}"</blockquote>
     <quote-author :authorName="quote.author" :authorSlug="quote.authorSlug" />
-  </article>
+  </div>
 </template>
 
 <style lang="scss">
-  $sm: 640px;
-
+$sm: 640px;
 
 .quote {
   margin: 0 auto;

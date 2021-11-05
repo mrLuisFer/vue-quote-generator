@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="quote-author inline-block" id="quote-author">
+  <article class="quote-author inline-block" id="quote-author">
     <h1 class="quote-author-name">
       <a
         :href="`https://www.google.com/search?q=${authorSlug}`"
@@ -25,11 +25,16 @@ export default {
         {{ authorName }}
       </a>
       <router-link :to="`/quotes/${authorSlug}`" class="quote-author-name-icon">
-        <span class="material-icons animate-pulse" :title="`Most famous quotes of ${authorName}`"> arrow_forward </span>
+        <span
+          class="material-icons animate-pulse"
+          :title="`Most famous quotes of ${authorName}`"
+        >
+          arrow_forward
+        </span>
       </router-link>
     </h1>
     <p class="quote-author-slug">{{ authorSlug }}</p>
-  </div>
+  </article>
 </template>
 
 <style scoped lang="scss">
