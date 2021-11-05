@@ -1,7 +1,7 @@
 <script>
 export default {
-  name: 'GoBackBtn',
   el: '#go-back-btn',
+  name: 'GoBackBtn',
   props: {
     onMouseEnterOnBackBtn: {
       required: true,
@@ -28,11 +28,11 @@ export default {
     id="go-back-btn"
     draggable="false"
     class="flex header-allBtn select-none"
-    @click="goBack"
-    @mouseenter="onMouseEnterOnBackBtn"
-    @mouseleave="onMouseLeaveOnBackBtn"
     title="This goes back one page"
     type="button"
+    @mouseenter="onMouseEnterOnBackBtn"
+    @mouseleave="onMouseLeaveOnBackBtn"
+    @click="goBack"
   >
     <span class="material-icons header-icon animate-pulse"> chevron_left </span>
     <span

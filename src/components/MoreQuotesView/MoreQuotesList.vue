@@ -1,11 +1,11 @@
 <script>
 export default {
-  name: 'MoreQuotesList',
   el: '#more-quotes-list',
+  name: 'MoreQuotesList',
   props: {
     quotes: {
       type: Object,
-      default: {},
+      default: () => {},
     },
   },
 }

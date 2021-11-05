@@ -2,8 +2,8 @@
 import QuoteAuthor from './QuoteAuthor.vue'
 
 export default {
-  name: 'QuoteContent',
   el: '#quote-content',
+  name: 'QuoteContent',
   components: {
     'quote-author': QuoteAuthor,
   },
@@ -29,9 +29,9 @@ export default {
 <template>
   <div
     v-for="quote in quotes"
+    id="#quote-content"
     :key="quote._id"
     class="quote"
-    id="#quote-content"
   >
     <blockquote class="quote-text">"{{ quote.content }}"</blockquote>
     <quote-author :authorName="quote.author" :authorSlug="quote.authorSlug" />

@@ -3,8 +3,12 @@ import MoreQuotesFooter from '../components/MoreQuotesView/MoreQuotesFooter.vue'
 import MoreQuotesList from '../components/MoreQuotesView/MoreQuotesList.vue'
 
 export default {
-  name: 'MoreQuotes',
   el: '#more-quotes',
+  name: 'MoreQuotes',
+  components: {
+    'more-quotes-footer': MoreQuotesFooter,
+    'more-quotes-list': MoreQuotesList,
+  },
   data() {
     return {
       quotes: {},
@@ -12,10 +16,6 @@ export default {
       disablePage: false,
       loading: true,
     }
-  },
-  components: {
-    'more-quotes-footer': MoreQuotesFooter,
-    'more-quotes-list': MoreQuotesList,
   },
   mounted() {
     this.getMoreQuotes()
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <template>
-  <section class="container" id="more-quotes">
+  <section id="more-quotes" class="container">
     <h1 class="text-lg font-bold">List of {{ quotes.count }} quotes:</h1>
     <div v-if="!loading">
       <more-quotes-list :quotes="quotes"></more-quotes-list>
