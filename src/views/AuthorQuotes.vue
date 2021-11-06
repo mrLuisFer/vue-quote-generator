@@ -1,10 +1,16 @@
 <script>
+import Loader from '../components/common/Loader.vue'
+
 export default {
+  components: {
+    'common-loader': Loader,
+  },
   data() {
     return {
       authorParams: this.$route.params.author,
       authorQuoteData: [],
       author: '',
+      loading: true,
     }
   },
   mounted() {
@@ -20,13 +26,14 @@ export default {
 
       const authorData = data.results.find((quote) => quote.author)
       this.author = authorData.author
+      this.loading = false
     },
   },
 }
 </script>
 
 <template>
-  <section class="author-container">
+  <section class="author-container" v-if="!loading">
     <h1
       class="
         text-3xl
@@ -65,6 +72,9 @@ export default {
         </li>
       </ul>
     </article>
+  </section>
+  <section v-else>
+    <common-loader></common-loader>
   </section>
 </template>
 

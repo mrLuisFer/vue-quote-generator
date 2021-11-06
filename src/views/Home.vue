@@ -1,5 +1,5 @@
 <script setup>
-import QuoteContent from '../components/QuoteContent.vue'
+import QuoteContent from '../components/HomeView/QuoteContent.vue'
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <script>
 import QuoteAuthor from './QuoteAuthor.vue'
-import Loader from './common/Loader.vue'
+import Loader from '../common/Loader.vue'
 
 export default {
   el: '#quote-content',
@@ -43,8 +43,8 @@ export default {
     </div>
   </div>
   <div v-else>
-		<common-loader></common-loader>
-	</div>
+    <common-loader></common-loader>
+  </div>
 </template>
 
 <style lang="scss">
