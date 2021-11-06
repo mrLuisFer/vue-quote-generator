@@ -22,7 +22,6 @@ export default {
       const res = await fetch(url)
       const data = await res.json()
       this.authorQuoteData = data
-      console.log(data)
 
       const authorData = data.results.find((quote) => quote.author)
       this.author = authorData.author

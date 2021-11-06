@@ -34,7 +34,6 @@ export default {
       this.disablePage = false
       this.page++
       await this.getMoreQuotes()
-      console.log(this.page)
     },
     async previousPage() {
       if (this.page === 1) {
@@ -44,7 +43,6 @@ export default {
 
       this.page--
       await this.getMoreQuotes()
-      console.log(this.page)
     },
   },
 }
