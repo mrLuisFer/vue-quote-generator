@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <section class="author-container" v-if="!loading">
+  <section v-if="!loading" class="author-container">
     <h1
       class="
         text-3xl
