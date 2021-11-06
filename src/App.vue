@@ -4,9 +4,11 @@ import ScrollToTop from './components/ScrollToTop.vue'
 </script>
 
 <template>
-  <CommonHeader />
-  <router-view></router-view>
-  <ScrollToTop />
+  <div id="contaiener" class="dark:bg-blue-900">
+    <CommonHeader />
+    <router-view></router-view>
+    <ScrollToTop />
+  </div>
 </template>
 
 <style lang="scss">
@@ -17,7 +19,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
   --secondary: #ffe1af;
   --tertiary: #ffb085;
   --radius: 10px;
-  --transition: 0.2s ease-in-out;
+  --transition: 0.3s ease;
 }
 
 html {
@@ -31,13 +33,13 @@ html {
 }
 
 body {
-  background: rgb(250, 247, 245);
   scroll-behavior: smooth;
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  background: rgb(250, 247, 245);
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   width: 100%;

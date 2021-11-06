@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.vue'
 import GoBackBtn from './GoBackBtn.vue'
 import RandomBtn from './RandomBtn.vue'
+import DarkModeToggle from './DarkModeToggle.vue'
 
 export default {
   el: '#header',
@@ -10,6 +11,7 @@ export default {
     'header-link': HeaderLink,
     'goback-btn': GoBackBtn,
     'random-btn': RandomBtn,
+    'dark-mode-toggle': DarkModeToggle,
   },
   data() {
     return {
@@ -54,7 +56,10 @@ export default {
         <p>More quotes</p>
       </header-link>
     </div>
-    <random-btn :reloadWindow="reloadWindow" />
+    <div class="flex gap-x-2">
+      <dark-mode-toggle></dark-mode-toggle>
+      <random-btn :reloadWindow="reloadWindow" />
+    </div>
   </header>
 </template>
 
