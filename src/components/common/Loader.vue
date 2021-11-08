@@ -9,7 +9,7 @@ export default {
   <div id="common-loader" class="loader"></div>
 </template>
 
-<style scooped>
+<style lang="scss" scooped>
 $loaderSize: 56px;
 
 .loader {
