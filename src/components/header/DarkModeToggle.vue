@@ -2,15 +2,21 @@
 export default {
   el: '#dark-mode-toggle',
   name: 'DarkModeToggle',
+  data() {
+    return {
+      checked: false,
+    }
+  },
   methods: {
     toggleDarkMode() {
       const body = document.body
       const bodyClasslist = body.classList
-      console.log(bodyClasslist.contains('dark'))
-      if (bodyClasslist.contains('dark')) {
-        bodyClasslist.remove('dark')
-      } else {
+      /* the ! it is because, the first value of this.checked is false
+      	even though it is already checked */
+      if (!this.checked) {
         bodyClasslist.add('dark')
+      } else {
+        bodyClasslist.remove('dark')
       }
     },
   },
@@ -18,9 +24,21 @@ export default {
 </script>
 
 <template>
+  <span
+    class="
+      material-icons
+      transition-colors
+      dark:text-gray-100 dark:hover:text-red-200
+      hover:text-red-300
+    "
+  >
+    {{ !checked ? 'light_mode' : 'dark_mode' }}
+  </span>
+
   <label for="darkModeToggle" class="switch">
     <input
       id="darkModeToggle"
+      v-model="checked"
       type="checkbox"
       name="darkModeToggle"
       @click="toggleDarkMode"
@@ -32,10 +50,10 @@ export default {
 <style lang="scss">
 $translate: 21px;
 $sliderSize: 22px;
-$toggleCheckedColor: #2196f3;
+$toggleCheckedColor: var(--tertiary);
 $toggleBaseColor: #ccc;
-$sliderBaseColor: #fff;
-$sliderCheckedColor: var(--primary);
+$sliderBaseColor: var(--secondary);
+$sliderCheckedColor: #fff;
 
 .switch {
   position: relative;
