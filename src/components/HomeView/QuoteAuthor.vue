@@ -16,7 +16,10 @@ export default {
 </script>
 
 <template>
-  <article id="quote-author" class="quote-author inline-block">
+  <article
+    id="quote-author"
+    class="quote-author inline-block dark:text-gray-50"
+  >
     <h1 class="quote-author-name">
       <a
         :href="`https://www.google.com/search?q=${authorSlug}`"

@@ -46,6 +46,7 @@ export default {
       transition
       shadow-sm
       hover:shadow-lg hover:bg-yellow-200
+      dark:text-gray-50 dark:hover:text-gray-900
     "
     title="Scroll to top :)"
     @mouseenter="onMouseEnter"

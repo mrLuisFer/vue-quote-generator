@@ -49,8 +49,10 @@ export default {
 </script>
 
 <template>
-  <section id="more-quotes" class="container">
-    <h1 class="text-lg font-bold">List of {{ quotes.count }} quotes:</h1>
+  <section id="more-quotes">
+    <h1 class="text-lg font-bold dark:text-gray-50">
+      List of {{ quotes.count }} quotes:
+    </h1>
     <div v-if="!loading">
       <more-quotes-list :quotes="quotes"></more-quotes-list>
       <more-quotes-footer

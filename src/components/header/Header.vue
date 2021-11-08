@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.vue'
 import GoBackBtn from './GoBackBtn.vue'
 import RandomBtn from './RandomBtn.vue'
+import DarkModeToggle from './DarkModeToggle.vue'
 
 export default {
   el: '#header',
@@ -10,6 +11,7 @@ export default {
     'header-link': HeaderLink,
     'goback-btn': GoBackBtn,
     'random-btn': RandomBtn,
+    'dark-mode-toggle': DarkModeToggle,
   },
   data() {
     return {
@@ -54,7 +56,10 @@ export default {
         <p>More quotes</p>
       </header-link>
     </div>
-    <random-btn :reloadWindow="reloadWindow" />
+    <div class="flex gap-x-2">
+      <dark-mode-toggle></dark-mode-toggle>
+      <random-btn :reloadWindow="reloadWindow" />
+    </div>
   </header>
 </template>
 
@@ -91,20 +96,6 @@ $gray: #9b9b9b;
       background: var(--secondary);
       border: 1px solid var(--tertiary);
       transition: var(--transition);
-
-      /* &::after {
-        transition: var(--transition);
-        content: 'This will reload the page';
-        position: absolute;
-        bottom: -5rem;
-        width: 100px;
-        background: #242424;
-        border-radius: var(--radius);
-        padding: 0.5rem;
-        font-size: 0.75rem;
-        color: #fff;
-        font-weight: normal;
-      } */
     }
   }
 
@@ -129,10 +120,6 @@ $gray: #9b9b9b;
 
   &-icon {
     font-size: 0.95rem;
-
-    @media (min-width: 640px) {
-      margin-right: 0.3rem;
-    }
   }
 }
 

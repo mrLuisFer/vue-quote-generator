@@ -34,6 +34,7 @@ export default {
       active:bg-yellow-300
       hover:bg-yellow-200
       transition-colors
+      dark:text-gray-100 dark:hover:text-gray-900
     "
     @click="onClick"
   >
