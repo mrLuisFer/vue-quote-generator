@@ -10,14 +10,14 @@ export default {
 </template>
 
 <style lang="scss" scooped>
-$loaderSize: 56px;
+$loaderSize: 65px;
 
 .loader {
   border: 4px solid rgba(0, 0, 0, 0.1);
   width: $loaderSize;
   height: $loaderSize;
   border-radius: 50%;
-  border-left-color: var(--ternary);
+  border-left-color: var(--tertiary);
 
   animation: spin 1s ease infinite;
 }
