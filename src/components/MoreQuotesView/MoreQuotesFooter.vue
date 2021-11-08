@@ -40,7 +40,15 @@ export default {
         :disablePage="disablePage"
       ></footer-btn>
     </div>
-    <p class="font-semibold hover:text-green-600 transition-colors">
+    <p
+      class="
+        font-semibold
+        hover:text-green-600
+        dark:text-green-200 dark:hover:text-green-500
+        transition-colors
+        inline-block
+      "
+    >
       Page {{ quotes.page }}
     </p>
   </footer>

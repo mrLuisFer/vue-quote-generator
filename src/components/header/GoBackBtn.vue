@@ -27,7 +27,12 @@ export default {
   <button
     id="go-back-btn"
     draggable="false"
-    class="flex header-allBtn select-none"
+    class="
+      flex
+      header-allBtn
+      select-none
+      dark:text-gray-50 dark:hover:text-gray-900
+    "
     title="This goes back one page"
     type="button"
     @mouseenter="onMouseEnterOnBackBtn"

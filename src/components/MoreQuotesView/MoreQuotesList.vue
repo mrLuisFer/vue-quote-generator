@@ -25,13 +25,18 @@ export default {
         group
       "
     >
-      <blockquote class="text-base md:text-lg max-w-lg leading-7">
+      <blockquote
+        class="text-base md:text-lg max-w-lg leading-7 dark:text-gray-50"
+      >
         {{ quote.content }}
       </blockquote>
       <h2 class="mt-2 md:mt-0 text-xs font-semibold group-hover:text-blue-600">
         <router-link
           :to="`/quotes/${quote.authorSlug}`"
-          class="quote-author-name-icon"
+          class="
+            quote-author-name-icon
+            dark:text-gray-400 dark:group-hover:text-blue-500
+          "
           :title="`Click to see more quotes of ${quote.author}`"
         >
           -

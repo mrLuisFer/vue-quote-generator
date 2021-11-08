@@ -38,7 +38,9 @@ export default {
       :key="quote._id"
       class="quote"
     >
-      <blockquote class="quote-text">"{{ quote.content }}"</blockquote>
+      <blockquote class="quote-text transition-colors dark:text-gray-50 dark:hover:text-white">
+        "{{ quote.content }}"
+      </blockquote>
       <quote-author :authorName="quote.author" :authorSlug="quote.authorSlug" />
     </div>
   </div>
