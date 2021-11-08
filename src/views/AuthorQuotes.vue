@@ -42,13 +42,14 @@ export default {
         border-l-4 border-yellow-100
         hover:border-yellow-400
         transition-colors
+        dark:text-gray-100
       "
     >
       <a :href="`https://www.google.com/search?q=${author}`" target="_blank">
         {{ author }}
       </a>
     </h1>
-    <p class="text-sm font-semibold my-3">
+    <p class="text-sm font-semibold my-3 dark:text-gray-400">
       {{ authorQuoteData.count }} Most famous quotes:
     </p>
     <article>
@@ -62,7 +63,8 @@ export default {
             border-l-4 border-yellow-100
             pl-2
             hover:border-red-400
-            transition-all
+            transition
+            dark:text-gray-200 dark:hover:text-white
           "
         >
           <blockquote>

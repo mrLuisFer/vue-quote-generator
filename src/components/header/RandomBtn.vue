@@ -1,6 +1,4 @@
 <script>
-const defaultBtnText = 'Random'
-
 export default {
   el: '#random-btn',
   name: 'RandomBtn',
@@ -12,7 +10,7 @@ export default {
   },
   data() {
     return {
-      randomBtnText: defaultBtnText,
+      randomBtnText: '',
     }
   },
   methods: {
@@ -20,7 +18,7 @@ export default {
       this.randomBtnText = 'Reload window'
     },
     handleMouseLeave() {
-      this.randomBtnText = defaultBtnText
+      this.randomBtnText = ''
     },
   },
 }
