@@ -96,20 +96,6 @@ $gray: #9b9b9b;
       background: var(--secondary);
       border: 1px solid var(--tertiary);
       transition: var(--transition);
-
-      /* &::after {
-        transition: var(--transition);
-        content: 'This will reload the page';
-        position: absolute;
-        bottom: -5rem;
-        width: 100px;
-        background: #242424;
-        border-radius: var(--radius);
-        padding: 0.5rem;
-        font-size: 0.75rem;
-        color: #fff;
-        font-weight: normal;
-      } */
     }
   }
 
@@ -134,10 +120,6 @@ $gray: #9b9b9b;
 
   &-icon {
     font-size: 0.95rem;
-
-    @media (min-width: 640px) {
-      margin-right: 0.3rem;
-    }
   }
 }
 
