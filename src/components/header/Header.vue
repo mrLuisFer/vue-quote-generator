@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       currentRoute: this.$router.currentRoute._value.fullPath.toString(),
-      goBackHover: false,
     }
   },
   methods: {
@@ -30,12 +29,6 @@ export default {
     goBack() {
       this.$router.go(-1)
     },
-    onMouseEnterOnBackBtn() {
-      this.goBackHover = true
-    },
-    onMouseLeaveOnBackBtn() {
-      this.goBackHover = false
-    },
   },
 }
 </script>
@@ -43,12 +36,7 @@ export default {
 <template>
   <header id="header" class="header flex-wrap">
     <div class="header-links">
-      <goback-btn
-        :onMouseEnterOnBackBtn="onMouseEnterOnBackBtn"
-        :onMouseLeaveOnBackBtn="onMouseLeaveOnBackBtn"
-        :goBack="goBack"
-        :goBackHover="goBackHover"
-      ></goback-btn>
+      <goback-btn :goBack="goBack"></goback-btn>
       <header-link url="/" iconName="home" title="Go to the home view">
         <p>Home</p>
       </header-link>
