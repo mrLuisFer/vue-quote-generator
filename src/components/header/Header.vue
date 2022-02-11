@@ -1,7 +1,7 @@
 <script>
 import HeaderLink from './HeaderLink.vue'
 import GoBackBtn from './GoBackBtn.vue'
-import RandomBtn from './RandomBtn.vue'
+import ReloadBtn from './ReloadBtn.vue'
 import DarkModeToggle from './DarkModeToggle.vue'
 
 export default {
@@ -10,7 +10,7 @@ export default {
   components: {
     'header-link': HeaderLink,
     'goback-btn': GoBackBtn,
-    'random-btn': RandomBtn,
+    'reload-btn': ReloadBtn,
     'dark-mode-toggle': DarkModeToggle,
   },
   data() {
@@ -46,7 +46,7 @@ export default {
     </div>
     <div class="flex gap-x-2">
       <dark-mode-toggle></dark-mode-toggle>
-      <random-btn :reloadWindow="reloadWindow" />
+      <reload-btn :reloadWindow="reloadWindow" />
     </div>
   </header>
 </template>
