@@ -1,52 +1,41 @@
-<script>
+<script setup>
 import HeaderLink from './HeaderLink.vue'
 import GoBackBtn from './GoBackBtn.vue'
 import ReloadBtn from './ReloadBtn.vue'
 import DarkModeToggle from './DarkModeToggle.vue'
 
-export default {
-  el: '#header',
-  name: 'CommonHeader',
-  components: {
-    'header-link': HeaderLink,
-    'goback-btn': GoBackBtn,
-    'reload-btn': ReloadBtn,
-    'dark-mode-toggle': DarkModeToggle,
-  },
-  data() {
-    return {
-      currentRoute: this.$router.currentRoute._value.fullPath.toString(),
-    }
-  },
-  methods: {
-    reloadWindow() {
-      if (this.currentRoute === '/') {
-        window.location.reload()
-      } else {
-        this.$router.push('/')
-      }
-    },
-    goBack() {
-      this.$router.go(-1)
-    },
-  },
+function reloadWindow() {
+  let self = this
+  const currentRoute = self.$router.currentRoute._value.fullPath.toString()
+
+  if (currentRoute === '/') {
+    window.location.reload()
+  } else {
+    self.$router.push('/')
+  }
+}
+
+function goBack() {
+  let self = this
+
+  self.$router.go(-1)
 }
 </script>
 
 <template>
   <header id="header" class="header flex-wrap">
     <div class="header-links">
-      <goback-btn :goBack="goBack"></goback-btn>
-      <header-link url="/" iconName="home" title="Go to the home view">
+      <GoBackBtn :goBack="goBack" />
+      <HeaderLink url="/" iconName="home" title="Go to home">
         <p>Home</p>
-      </header-link>
-      <header-link url="/quotes" iconName="bolt" title="List of quotes">
+      </HeaderLink>
+      <HeaderLink url="/quotes" iconName="bolt" title="List of quotes">
         <p>More quotes</p>
-      </header-link>
+      </HeaderLink>
     </div>
     <div class="flex gap-x-2">
-      <dark-mode-toggle></dark-mode-toggle>
-      <reload-btn :reloadWindow="reloadWindow" />
+      <DarkModeToggle />
+      <ReloadBtn :reloadWindow="reloadWindow" />
     </div>
   </header>
 </template>
