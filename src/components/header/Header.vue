@@ -17,7 +17,6 @@ function reloadWindow() {
 
 function goBack() {
   let self = this
-
   self.$router.go(-1)
 }
 </script>
