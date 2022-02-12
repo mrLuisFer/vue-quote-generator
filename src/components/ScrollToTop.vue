@@ -1,28 +1,11 @@
-<script>
-const defaultBtnIcon = 'keyboard_arrow_up'
+<script setup>
+let defaultBtnIcon = 'keyboard_arrow_up'
 
-export default {
-  el: '#scrollToTop',
-  name: 'ScrollToTop',
-  data() {
-    return {
-      btnIcon: defaultBtnIcon,
-    }
-  },
-  methods: {
-    onMouseEnter() {
-      this.btnIcon = 'north'
-    },
-    onMouseLeave() {
-      this.btnIcon = defaultBtnIcon
-    },
-    toTop() {
-      window.scrollTo({
-        top: 0,
-        scroll: 'smooth',
-      })
-    },
-  },
+function toTop() {
+  window.scrollTo({
+    top: 0,
+    scroll: 'smooth',
+  })
 }
 </script>
 
@@ -48,13 +31,11 @@ export default {
       hover:shadow-lg hover:bg-yellow-200
       dark:text-gray-50 dark:hover:text-gray-900
     "
-    title="Scroll to top :)"
-    @mouseenter="onMouseEnter"
-    @mouseleave="onMouseLeave"
+    title="Scroll to top"
     @click="toTop"
   >
     <span class="material-icons">
-      {{ btnIcon }}
+      {{ defaultBtnIcon }}
     </span>
   </button>
 </template>
